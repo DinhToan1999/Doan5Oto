@@ -18,7 +18,7 @@ export class MainComponent extends BaseComponent implements OnInit {
 
 ngOnInit(): void {
   Observable.combineLatest(
-    this._api.get('/get-pro-all'),
+    this._api.get('/api/Product/get-all'),
   ).takeUntil(this.unsubscribe).subscribe(res => {
     this.list_item = res[0];
     setTimeout(() => {
