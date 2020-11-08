@@ -15,7 +15,7 @@ export class ChitietComponent extends BaseComponent implements OnInit {
     this.item = {};
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.get('get-pro-id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.get('/api/Product/get-by-id/'+id).takeUntil(this.unsubscribe).subscribe(res => {
         this.item = res;
         setTimeout(() => {
           this.loadScripts();
