@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChitietComponent } from './chitiet/chitiet.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QlyteComponent } from './qlyte/qlyte.component';
+import { DanhmucComponent } from './danhmuc/danhmuc.component';
 
 
 
@@ -36,7 +37,8 @@ const routes: Routes = [
     FooterComponent,
     MainComponent,
     ChitietComponent,
-    QlyteComponent
+    QlyteComponent,
+    DanhmucComponent
   ],
   imports: [
     BrowserModule,
