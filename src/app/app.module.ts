@@ -25,7 +25,7 @@ const routes: Routes = [
     component: ChitietComponent,
   },
   {
-    path:'danhmuc',
+    path:'danhmuc/:id',
     component: DanhmucComponent,
   },
   {

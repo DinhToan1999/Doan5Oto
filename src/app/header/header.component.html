@@ -450,7 +450,7 @@
                                                 <ul class="mega_menu_inner">
                                                     <li><a href="#">Danh mục sản phẩm</a>
                                                         <ul>
-                                                            <li *ngFor="let mn of menu"><a href="#">{{ mn.namE_MENU }}</a></li>
+                                                            <li *ngFor="let mn of menu"><a [routerLink]="['/danhmuc',mn.iD_MENU]">{{ mn.namE_MENU }}</a></li>
                                                         </ul>
                                                     </li>
                                                 

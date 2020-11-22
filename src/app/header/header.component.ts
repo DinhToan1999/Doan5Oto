@@ -18,7 +18,6 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 
   ngOnInit(): void {
     this.getmenuall();
-   
   }
   getmenuall(){
     Observable.combineLatest(
@@ -31,5 +30,4 @@ export class HeaderComponent extends BaseComponent implements OnInit {
       });
     }, err => { });
     }
-
 }

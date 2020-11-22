@@ -10,24 +10,24 @@ import 'rxjs/add/operator/takeUntil';
   styleUrls: ['./danhmuc.component.css']
 })
 export class DanhmucComponent extends BaseComponent implements OnInit {
-  mn: any;
+
+  list:any;
   constructor(injector: Injector) { 
     super(injector);
   }
-
   ngOnInit(): void {
-    this.getmenuall();
-   
+    this.list = {};
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('/api/Product/pro-by-menu/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.list = res;
+        
+        setTimeout(() => {
+          this.loadScripts();
+
+        });
+      }); 
+    });
+
   }
-  getmenuall(){
-    Observable.combineLatest(
-      
-      this._api.get('/api/Product/get-all'),
-    ).takeUntil(this.unsubscribe).subscribe(res => {
-      this.mn = res[0];
-      setTimeout(() => {
-        this.loadScripts();
-      });
-    }, err => { });
-    }
 }

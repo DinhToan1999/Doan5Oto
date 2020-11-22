@@ -58,11 +58,11 @@
                  <!--shop toolbar end-->
                  <div class="row shop_wrapper">
                     <div class="col-lg-3 col-md-4 col-12 ">
-                        <article class="single_product">
+                        <article class="single_product" *ngFor="let lt of list">
                             <figure>
                                 <div class="product_thumb">
-                                    <a class="primary_img" href="product-details.html"><img src="assets/img/product/product1.jpg" alt=""></a>
-                                    <a class="secondary_img" href="product-details.html"><img src="assets/img/product/product2.jpg" alt=""></a>
+                                    <a class="primary_img" [routerLink]="['/chitiet',lt.iD_PROD]"><img src="{{ lt.img}}" alt=""></a>
+                    
                                     <div class="label_product">
                                         <span class="label_sale">-56%</span>
                                     </div>
@@ -72,8 +72,8 @@
                                 </div>
                                 <div class="product_content grid_content">
                                     <div class="product_content_inner">
-                                        <p class="manufacture_product"><a href="#">Parts</a></p>
-                                        <h4 class="product_name"><a href="product-details.html">Nunc Neque Eros</a></h4>
+                                        <p class="manufacture_product"><a [routerLink]="['/chitiet',lt.iD_PROD]">{{lt.namE_PROD}}</a></p>
+                
                                         <div class="product_rating">
                                            <ul>
                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -84,8 +84,8 @@
                                            </ul>
                                         </div>
                                         <div class="price_box"> 
-                                            <span class="old_price">$320.00</span> 
-                                            <span class="current_price">$120.00</span>
+                                            <span class="old_price">{{lt.price}},000$</span> 
+                                            <span class="current_price">{{lt.price}},000$</span>
                                         </div>
                                     </div>
                                     <div class="action_links">
@@ -96,10 +96,10 @@
                                         </ul>
                                     </div> 
                                 </div>
-                                <div class="product_content list_content">
+                                <div class="product_content list_content" >
                                     <div class="left_caption">
-                                       <p class="manufacture_product"><a href="#">Parts</a></p>
-                                        <h4 class="product_name"><a href="product-details.html">Nunc Neque Eros</a></h4>
+                                       <p class="manufacture_product"><a href="#">{{lt.namE_PROD}}</a></p>
+                                      
                                         <div class="product_rating">
                                            <ul>
                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -110,8 +110,8 @@
                                            </ul>
                                         </div>
                                         <div class="price_box"> 
-                                            <span class="old_price">$320.00</span> 
-                                            <span class="current_price">$120.00</span>
+                                            <span class="old_price">{{lt.price}},000$</span> 
+                                            <span class="current_price">{{lt.price}},000$</span>
                                         </div>
                                         <div class="product_desc">
                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco,Proin lectus ipsum, gravida et mattis vulputate, tristique ut lectus</p>
