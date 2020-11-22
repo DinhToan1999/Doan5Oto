@@ -25,9 +25,14 @@ const routes: Routes = [
     component: ChitietComponent,
   },
   {
+    path:'danhmuc',
+    component: DanhmucComponent,
+  },
+  {
     path:'qlye',
     component: QlyteComponent,
   }
+
 ];
 
 @NgModule({

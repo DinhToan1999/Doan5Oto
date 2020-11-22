@@ -450,7 +450,7 @@
                                                 <ul class="mega_menu_inner">
                                                     <li><a href="#">Danh mục sản phẩm</a>
                                                         <ul>
-                                                            <li><a href="shop-fullwidth.html">Ford</a></li>
+                                                            <li *ngFor="let mn of menu"><a href="#">{{ mn.namE_MENU }}</a></li>
                                                         </ul>
                                                     </li>
                                                 
