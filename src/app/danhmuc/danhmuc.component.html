@@ -5,8 +5,8 @@
             <div class="col-12">
                 <div class="breadcrumb_content">
                     <ul>
-                        <li><a href="index.html">home</a></li>
-                        <li>shop fullwidth</li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li>Danh mục sản phẩm</li>
                     </ul>
                 </div>
             </div>
@@ -41,7 +41,6 @@
                     <div class=" niceselect_option">
                         <form class="select_option" action="#">
                             <select name="orderby" id="short">
-
                                 <option selected value="1">Sort by average rating</option>
                                 <option  value="2">Sort by popularity</option>
                                 <option value="3">Sort by newness</option>
@@ -50,10 +49,7 @@
                                 <option value="6">Product Name: Z</option>
                             </select>
                         </form>
-                    </div>
-                    <div class="page_amount">
-                        <p>Showing 1–9 of 21 results</p>
-                    </div>
+                    </div>      
                 </div>
                  <!--shop toolbar end-->
                  <div class="row shop_wrapper">
@@ -67,14 +63,14 @@
                                         <span class="label_sale">-56%</span>
                                     </div>
                                     <div class="quick_button">
-                                        <a href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"><i class="icon-eye"></i></a>
+                                        <a [routerLink]="['/chitiet',lt.iD_PROD]" href="#" data-toggle="modal" data-target="#modal_box"  title="quick view"><i class="icon-eye"></i></a>
                                     </div>
                                 </div>
                                 <div class="product_content grid_content">
                                     <div class="product_content_inner">
                                         <p class="manufacture_product"><a [routerLink]="['/chitiet',lt.iD_PROD]">{{lt.namE_PROD}}</a></p>
                 
-                                        <div class="product_rating">
+                                        <div class="product_rating">    
                                            <ul>
                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
                                                <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
