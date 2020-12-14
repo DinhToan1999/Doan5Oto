@@ -16,8 +16,8 @@ export class CartComponent extends BaseComponent implements OnInit {
       this.items = res;
       this.total = 0;
       for(let x of this.items){ 
-        x.money = x.quantity * x.PRICE;
-        this.total += x.quantity * x.PRICE;
+        x.money = x.quantity * x.price;
+        this.total += x.quantity * x.price;
       } 
     });
   } 
@@ -27,7 +27,7 @@ export class CartComponent extends BaseComponent implements OnInit {
   }
   addQty(PRODUCT, quantity){ 
     PRODUCT.quantity =  quantity;
-    PRODUCT.money =  Number.parseInt(PRODUCT.quantity) *  PRODUCT.PRICE;
+    PRODUCT.money =  Number.parseInt(PRODUCT.quantity) *  PRODUCT.price;
     this._cart.addQty(PRODUCT);
   }
 }

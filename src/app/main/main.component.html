@@ -169,24 +169,24 @@
                             <div class="tab-pane fade show active" id="Sellers" role="tabpanel">
                                 <div class="row">
                                     <div class="product_carousel product_column6 owl-carousel">
-                                       <div *ngFor="let it of new" class="col-lg-3">
+                                       <div *ngFor="let t of new" class="col-lg-3">
                                            <div class="product_items">
                                                 <article  class="single_product">
                                                     <figure>
                                                         <div class="product_thumb">
-                                                            <a  [routerLink]="['/chitiet',it.iD_PROD]"><img src="{{ it.img}}" alt=""></a>
+                                                            <a  [routerLink]="['/chitiet',t.iD_PROD]"><img src="{{ t.img}}" alt=""></a>
                                                            
                                                             <div class="label_product">
                                                                 <span class="label_sale">New</span>
                                                             </div>
                                                             <div class="quick_button">
-                                                                <a [routerLink]="['/chitiet',it.iD_PROD]" y ><i class="icon-eye"></i></a>
+                                                                <a [routerLink]="['/chitiet',t.iD_PROD]" y ><i class="icon-eye"></i></a>
                                                             </div>
                                                         </div>
                                                         <div class="product_content" >
                                                             <div class="product_content_inner">
-                                                                <p class="manufacture_product"><a href="#">{{it.namE_PROD}}</a></p>
-                                                                <h4 class="product_name"><a href="product-details.html">{{it.color}}</a></h4>
+                                                                <p class="manufacture_product"><a href="#">{{t.namE_PROD}}</a></p>
+                                                                <h4 class="product_name"><a href="product-details.html">{{t.color}}</a></h4>
                                                                 <div class="product_rating">
                                                                    <ul>
                                                                        <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -197,13 +197,13 @@
                                                                    </ul>
                                                                 </div>
                                                                 <div class="price_box"> 
-                                                                    <span class="old_price">{{it.price}},000$</span> 
-                                                                    <span class="current_price">{{it.price}},000$</span>
+                                                                    <span class="old_price">{{t.price}},000$</span> 
+                                                                    <span class="current_price">{{t.price}},000$</span>
                                                                 </div>
                                                             </div> 
                                                             <div class="action_links">
                                                                  <ul>
-                                                                    <li class="add_to_cart"><a href="cart.html" title="Add to cart">Add to cart</a></li>
+                                                                    <li class="add_to_cart"><a [routerLink]="['/home']" (click)="addToCart(t)"  title="Add to cart">Add to cart</a></li>
                                                                     <li class="wishlist"><a href="wishlist.html"  title="Add to Wishlist"><i class="icon-heart"></i></a></li>
                                                                     <li class="compare"><a href="compare.html" title="Add to Compare"><i class="icon-rotate-cw"></i></a></li>  
                                                                 </ul>
@@ -236,24 +236,24 @@
                                         <div class="tab-pane fade show active" id="Sellers" role="tabpanel">
                                             <div class="row">
                                                 <div class="product_carousel product_column6 owl-carousel">
-                                                   <div *ngFor="let it of km" class="col-lg-3">
+                                                   <div *ngFor="let its of km" class="col-lg-3">
                                                        <div class="product_items">
                                                             <article  class="single_product">
                                                                 <figure>
                                                                     <div class="product_thumb">
-                                                                        <a  [routerLink]="['/chitiet',it.iD_PROD]"><img src="{{ it.img}}" alt=""></a>
+                                                                        <a  [routerLink]="['/chitiet',its.iD_PROD]"><img src="{{ its.img}}" alt=""></a>
                                                                        
                                                                         <div class="label_product">
                                                                             <span class="label_sale">-56%</span>
                                                                         </div>
                                                                         <div class="quick_button">
-                                                                            <a [routerLink]="['/chitiet',it.iD_PROD]" y ><i class="icon-eye"></i></a>
+                                                                            <a [routerLink]="['/chitiet',its.iD_PROD]" y ><i class="icon-eye"></i></a>
                                                                         </div>
                                                                     </div>
                                                                     <div class="product_content" >
                                                                         <div class="product_content_inner">
-                                                                            <p class="manufacture_product"><a href="#">{{it.namE_PROD}}</a></p>
-                                                                            <h4 class="product_name"><a href="product-details.html">{{it.color}}</a></h4>
+                                                                            <p class="manufacture_product"><a href="#">{{its.namE_PROD}}</a></p>
+                                                                            <h4 class="product_name"><a href="product-details.html">{{its.color}}</a></h4>
                                                                             <div class="product_rating">
                                                                                <ul>
                                                                                    <li><a href="#"><i class="ion-android-star-outline"></i></a></li>
@@ -264,13 +264,13 @@
                                                                                </ul>
                                                                             </div>
                                                                             <div class="price_box"> 
-                                                                                <span class="old_price">{{it.price}},000$</span> 
-                                                                                <span class="current_price">{{it.price}},000$</span>
+                                                                                <span class="old_price">{{its.price}},000$</span> 
+                                                                                <span class="current_price">{{its.price}},000$</span>
                                                                             </div>
                                                                         </div> 
                                                                         <div class="action_links">
                                                                              <ul>
-                                                                                <li class="add_to_cart"><a href="cart.html" title="Add to cart">Thêm vào giỏ hàng</a></li>
+                                                                                <li class="add_to_cart"><a [routerLink]="['/home']" (click)="addToCart(its)"  title="Add to cart">Add to cart</a></li>
                                                                                 <li class="wishlist"><a href="wishlist.html"  title="Add to Wishlist"><i class="icon-heart"></i></a></li>
                                                                                 <li class="compare"><a href="compare.html" title="Add to Compare"><i class="icon-rotate-cw"></i></a></li>  
                                                                             </ul>
