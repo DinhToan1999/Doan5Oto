@@ -11,6 +11,7 @@ import { ChitietComponent } from './chitiet/chitiet.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QlyteComponent } from './qlyte/qlyte.component';
 import { DanhmucComponent } from './danhmuc/danhmuc.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -19,6 +20,10 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
    
+  },
+  {
+    path:'cart',
+    component: CartComponent,
   },
   {
     path:'chitiet/:id',
@@ -43,7 +48,8 @@ const routes: Routes = [
     MainComponent,
     ChitietComponent,
     QlyteComponent,
-    DanhmucComponent
+    DanhmucComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

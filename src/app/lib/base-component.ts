@@ -2,11 +2,12 @@ import { Injector, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { of as observableOf, Subject } from 'rxjs';
 import { ApiService } from "./api.service";
+import { CartService} from "./cart.service";
 export class BaseComponent {
    public unsubscribe = new Subject();
    public _renderer:any;
+   public _cart: CartService;
    public _api: ApiService;
-  
    public _route: ActivatedRoute;
    constructor(injector: Injector) {  
       this._renderer = injector.get(Renderer2);

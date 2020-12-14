@@ -54,5 +54,9 @@ GetProdKm(){
     });
   }, err => { });
 }
+addToCart(it) { 
+  this._cart.addToCart(it);
+  alert('Thêm thành công!'); 
+}
 }
 
