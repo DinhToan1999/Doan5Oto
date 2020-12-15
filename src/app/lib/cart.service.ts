@@ -51,11 +51,11 @@ export class CartService {
     this.itemsSubject.next(local_storage);
   }
 
-  addQty(PRODUCT) {
+  addQty(Product) {
     let local_storage = JSON.parse(localStorage.getItem('cart'));
     for (let x of local_storage) {
-      if (x.ID_PROD == PRODUCT.ID_PROD) {
-        x.quantity = PRODUCT.quantity;
+      if (x.ID_PROD == Product.ID_PROD) {
+        x.quantity = Product.quantity;
         break;
       }
     }

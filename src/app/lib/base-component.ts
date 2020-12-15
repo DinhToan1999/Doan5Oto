@@ -12,7 +12,7 @@ export class BaseComponent {
    constructor(injector: Injector) {  
       this._renderer = injector.get(Renderer2);
       this._api = injector.get(ApiService);
-     
+      this._cart = injector.get(CartService);
       this._route = injector.get(ActivatedRoute);
       } 
    public loadScripts() {
