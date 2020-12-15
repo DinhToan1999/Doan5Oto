@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { QlyteComponent } from './qlyte/qlyte.component';
 import { DanhmucComponent } from './danhmuc/danhmuc.component';
 import { CartComponent } from './cart/cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 
@@ -49,7 +50,8 @@ const routes: Routes = [
     ChitietComponent,
     QlyteComponent,
     DanhmucComponent,
-    CartComponent
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
