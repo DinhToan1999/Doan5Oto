@@ -14,23 +14,23 @@ export class CartService {
     this.itemsSubject.next(local_storage); 
   }
   
-  addToCart(PRODUCT) {
-    PRODUCT.quantity = 1;
+  addToCart(product) {
+    product.quantity = 1;
     let local_storage:any;
     if (localStorage.getItem('cart') == null) {
-      local_storage = [PRODUCT];
+      local_storage = [product];
     } else {
       local_storage = JSON.parse(localStorage.getItem('cart'));
       let ok = true;
       for (let x of local_storage) {
-        if (x.ID_PROD == PRODUCT.ID_PROD) {
+        if (x.iD_PROD == product.iD_PROD) {
           x.quantity += 1;
           ok = false;
           break;
         }
       }
       if(ok){
-        local_storage.push(PRODUCT); 
+        local_storage.push(product); 
       } 
     }
     localStorage.setItem('cart', JSON.stringify(local_storage));
@@ -45,17 +45,17 @@ export class CartService {
     }
   }
 
-  deleteItem(ID_PROD) {
-    let local_storage = this.getItems().filter((x) => x.ID_PROD != ID_PROD);
+  deleteItem(iD_PROD) {
+    let local_storage = this.getItems().filter((x) => x.iD_PROD != iD_PROD);
     localStorage.setItem('cart', JSON.stringify(local_storage));
     this.itemsSubject.next(local_storage);
   }
 
-  addQty(Product) {
+  addQty(product) {
     let local_storage = JSON.parse(localStorage.getItem('cart'));
     for (let x of local_storage) {
-      if (x.ID_PROD == Product.ID_PROD) {
-        x.quantity = Product.quantity;
+      if (x.iD_PROD == product.iD_PROD) {
+        x.quantity = product.quantity;
         break;
       }
     }
