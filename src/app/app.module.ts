@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponent } from './main/main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ChitietComponent } from './chitiet/chitiet.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QlyteComponent } from './qlyte/qlyte.component';
 import { DanhmucComponent } from './danhmuc/danhmuc.component';
 import { CartComponent } from './cart/cart.component';
@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path:'cart',
     component: CartComponent,
+  },
+  {
+    path:'checkout',
+    component: CheckoutComponent,
   },
   {
     path:'chitiet/:id',
@@ -57,7 +61,9 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
