@@ -12,6 +12,7 @@ describe('ChitietComponent', () => {
     })
     .compileComponents();
   }));
+  
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ChitietComponent);
