@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="action_links">
                                          <ul>
-                                            <li class="add_to_cart"><a href="cart.html" title="Add to cart">Add to cart</a></li>
+                                            <li class="add_to_cart"><a [routerLink]="['/home']" (click)="addToCart(lt)" title="Add to cart">Thêm vào giỏ hàng</a></li>
                                             <li class="wishlist"><a href="wishlist.html"  title="Add to Wishlist"><i class="icon-heart"></i></a></li>
                                             <li class="compare"><a href="#" title="Add to Compare"><i class="icon-rotate-cw"></i></a></li> 
                                         </ul>
@@ -114,12 +114,12 @@
                                         </div>
                                     </div>
                                     <div class="right_caption">
-                                        <p class="text_available">Availability: <span>In Stock</span></p>
+                                        <p class="text_available">Trạng thái: <span>Còn</span></p>
                                         <div class="action_links">
                                             <ul> 
-                                                <li class="add_to_cart"><a href="cart.html" title="Add to cart">Add to cart</a></li>
-                                                <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i>  Add to Wishlist</a></li>
-                                                <li class="compare"><a href="#" title="compare"><i class="icon-rotate-cw"></i>Add to Compare</a></li>
+                                                <li class="add_to_cart"><a [routerLink]="['/home']" (click)="addToCart(lt)" title="Add to cart">Thêm vào giỏ hàng</a></li>
+                                                <li class="wishlist"><a href="wishlist.html" title="Add to Wishlist"><i class="icon-heart"></i>  Thêm vào mục yêu thích</a></li>
+                                                
                                             </ul>
                                         </div>
                                     </div>

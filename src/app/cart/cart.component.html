@@ -27,22 +27,22 @@
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th class="product_remove">Delete</th>
-                                                <th class="product_thumb">Image</th>
-                                                <th class="product_name">Product</th>
-                                                <th class="product-price">Price</th>
-                                                <th class="product_quantity">Quantity</th>
-                                                <th class="product_total">Total</th>
+                                                <th class="product_remove">Xóa</th>
+                                                <th class="product_thumb">Ảnh</th>
+                                                <th class="product_name">Sản phẩm</th>
+                                                <th class="product-price">Giá</th>
+                                                <th class="product_quantity">Số lượng</th>
+                                                <th class="product_total">Tổng </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr *ngFor="let c of items"> 
                                                <td class="product_remove"><a (click)="clearCart()"><i class="fa fa-trash-o"></i></a></td>
                                                 <td class="product_thumb"><a href="#"><img src="{{c.img}}" alt=""></a></td>
-                                                <td class="product_name"><a href="#">{{c.namE_PROD}}</a></td>
+                                                <td class="product_name"><a [routerLink]="['/chitiet',c.iD_PROD]">{{c.namE_PROD}}</a></td>
                                                 <td class="product-price">{{c.price}},000$</td>
-                                                <td class="product_quantity"><label>Quantity</label> <input #inp min="1" max="100"  (change)="addQty(c,inp.value)" [value]="c.quantity" type="number"></td>
-                                                <td class="product_total">{{c.money}}</td>
+                                                <td class="product_quantity"><label>Số lượng</label> <input #inp min="1" max="100"  (change)="addQty(c,inp.value)" [value]="c.quantity" type="number"></td>
+                                                <td class="product_total">{{c.money}},000$</td>
 
                                             </tr>
 
@@ -52,7 +52,7 @@
                                     </table>   
                                 </div>  
                                 <div class="cart_submit">
-                                    <button type="submit">update cart</button>
+                                    <button type="submit">Cập nhật giỏ hàng</button>
                                 </div>      
                             </div>
                          </div>
@@ -62,31 +62,21 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="coupon_code left">
-                                    <h3>Coupon</h3>
+                                    <h3>Phiếu khuyến mại</h3>
                                     <div class="coupon_inner">   
-                                        <p>Enter your coupon code if you have one.</p>                                
-                                        <input placeholder="Coupon code" type="text">
-                                        <button type="submit">Apply coupon</button>
+                                        <p>Điền mã code nếu bạn có.</p>                                
+                                        <input placeholder="Mã khuyến mại" type="text">
+                                        <button type="submit">Xác nhận</button>
                                     </div>    
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="coupon_code right">
-                                    <h3>Cart Totals</h3>
-                                    <div class="coupon_inner">
+                                    <h3>Tổng tiền giỏ hàng</h3>
+                                    <div class="coupon_inner">                                   
                                        <div class="cart_subtotal">
-                                           <p>Subtotal</p>
-                                           <p class="cart_amount">£215.00</p>
-                                       </div>
-                                       <div class="cart_subtotal ">
-                                           <p>Shipping</p>
-                                           <p class="cart_amount"><span>Flat Rate:</span> £255.00</p>
-                                       </div>
-                                       <a href="#">Calculate shipping</a>
-
-                                       <div class="cart_subtotal">
-                                           <p>Total</p>
-                                           <p class="cart_amount">{{total}}</p>
+                                           <p>Tổng tiền thanh toán</p>
+                                           <p class="cart_amount">{{total}},000$</p>
                                        </div>
                                        <div class="checkout_btn">
                                            <a href="#">Proceed to Checkout</a>

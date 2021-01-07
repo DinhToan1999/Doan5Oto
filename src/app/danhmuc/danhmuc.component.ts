@@ -28,6 +28,9 @@ export class DanhmucComponent extends BaseComponent implements OnInit {
         });
       }); 
     });
-
+  }
+  addToCart(n) { 
+    this._cart.addToCart(n);
+    alert('Thêm thành công!'); 
   }
 }

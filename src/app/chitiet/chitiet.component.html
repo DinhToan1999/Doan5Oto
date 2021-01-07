@@ -36,7 +36,7 @@
                     <div class="product_d_right">
                        <form action="#">
 
-                            <h3><a href="#">{{ item.namE_PROD }}</a></h3>
+                            <h3><a [routerLink]="['/chitiet',item.iD_PROD]">{{ item.namE_PROD }}</a></h3>
                             <div class="product_nav">
                                 
                             </div>
@@ -70,16 +70,12 @@
                             <div class="product_variant quantity">
                                 <label>Số lượng</label>
                                 <input min="1" max="100" value="1" type="number">
-                                <button class="button" type="submit">Thêm vào giỏ hàng</button>  
+                                <button class="add_to_cart"><a [routerLink]="['/chitiet',item.iD_PROD]" (click)="addToCart(item)"  >Thêm vào giỏ hàng</a></button> 
 
                             </div>
                             <div class=" product_d_action">
-                               
+                        
                             </div>
-                            <div class="product_meta">
-                                <span>Danh mục: <a href="#"></a></span>
-                            </div>
-
                         </form>
                         <div class="priduct_social">
                             <ul>

@@ -71,22 +71,19 @@
                                         </thead>
                                         <tbody>
                                             <tr *ngFor="let it of items">
-                                                <td>{{it.item_name}} <strong> × {{it.quantity}}</strong></td>
-                                                <td> {{it.money}}<td>
+                                                <td>{{it.item_name}}<strong> × {{it.quantity}}</strong></td>
+                                                <td> {{it.money}},000$<td>
                                             </tr> 
                                         </tbody>
                                         <tfoot>
-                                            <tr>
-                                                <th>Tổng tiền hóa đơn</th>
-                                                <td>$215.00</td>
-                                            </tr>
+                            
                                             <tr>
                                                 <th>Phí ship</th>
-                                                <td><strong>$5.00</strong></td>
+                                                <td><strong>5$</strong></td>
                                             </tr>
                                             <tr class="order_total">
                                                 <th>Tổng đơn hàng</th>
-                                                <td><strong>{{total}}</strong></td>
+                                                <td><strong>{{total}},000$</strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>     
